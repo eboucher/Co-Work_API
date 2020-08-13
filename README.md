@@ -1,3 +1,3 @@
-# Co'Work API made with Strapi
+# Strapi application
 
-The description of this API is yet to be written
+A quick description of your strapi application
