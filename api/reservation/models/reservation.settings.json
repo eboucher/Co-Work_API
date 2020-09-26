@@ -19,9 +19,9 @@
       "type": "datetime"
     },
     "user": {
+      "via": "reservations",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "reservations"
+      "model": "user"
     }
   }
 }

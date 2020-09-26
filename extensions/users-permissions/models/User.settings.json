@@ -60,8 +60,16 @@
       "type": "string"
     },
     "reservations": {
-      "via": "user",
-      "collection": "reservation"
+      "collection": "reservation",
+      "via": "user"
+    },
+    "membership": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "simple",
+        "resident"
+      ]
     }
   }
 }
