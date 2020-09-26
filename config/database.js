@@ -4,13 +4,13 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'mongoose',
       settings: {
-        uri: "mongodb://admin:CoWorkAdmin@cowork-cluster-shard-00-00.4s7xv.mongodb.net:27017,cowork-cluster-shard-00-01.4s7xv.mongodb.net:27017,cowork-cluster-shard-00-02.4s7xv.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-i6my47-shard-0&authSource=admin&retryWrites=true&w=majority",
-        host: env('DATABASE_HOST', 'cowork-cluster-shard-00-00.4s7xv.mongodb.net'),
+        uri: "mongodb+srv://admin:admin@cluster0.un89w.mongodb.net/CoWorkProd?retryWrites=true&w=majority",
+        host: env('DATABASE_HOST', 'cluster0.un89w.mongodb.net'),
         srv: env.bool('DATABASE_SRV', false),
         port: env.int('DATABASE_PORT', 27017),
-        database: env('DATABASE_NAME', 'CoWorkDB'),
+        database: env('DATABASE_NAME', 'CoWorkProd'),
         username: env('DATABASE_USERNAME', 'admin'),
-        password: env('DATABASE_PASSWORD', 'CoWorkAdmin'),
+        password: env('DATABASE_PASSWORD', 'admin'),
       },
       options: {
         authenticationDatabase: env('AUTHENTICATION_DATABASE', null),

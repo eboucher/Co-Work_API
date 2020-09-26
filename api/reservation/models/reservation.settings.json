@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "name": "Reservation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "UID": {
+      "type": "uid"
+    },
+    "start": {
+      "type": "datetime"
+    },
+    "end": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reservations"
+    }
+  }
+}
