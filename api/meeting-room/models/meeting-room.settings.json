@@ -1,0 +1,16 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meeting_rooms",
+  "info": {
+    "name": "MeetingRoom"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "MeetingRoomID": {
+      "type": "uid"
+    }
+  }
+}

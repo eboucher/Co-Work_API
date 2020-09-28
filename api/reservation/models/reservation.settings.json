@@ -19,9 +19,12 @@
       "type": "datetime"
     },
     "user": {
-      "via": "reservations",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "reservations"
+    },
+    "meeting_room": {
+      "model": "meeting-room"
     }
   }
 }
