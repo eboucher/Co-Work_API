@@ -1,15 +1,15 @@
 {
   "kind": "collectionType",
-  "collectionName": "cozy_louges",
+  "collectionName": "call_rooms",
   "info": {
-    "name": "CozyLouge"
+    "name": "CallRoom"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "cozyLougeName": {
+    "callRoomName": {
       "type": "string"
     },
     "bookings": {

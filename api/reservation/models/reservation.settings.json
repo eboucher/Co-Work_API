@@ -9,9 +9,6 @@
     "timestamps": true
   },
   "attributes": {
-    "UID": {
-      "type": "uid"
-    },
     "start": {
       "type": "datetime"
     },
@@ -21,7 +18,13 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "reservations"
+      "via": "booking"
+    },
+    "call_room": {
+      "model": "call-room"
+    },
+    "cozy_louge": {
+      "model": "cozy-louge"
     },
     "meeting_room": {
       "model": "meeting-room"

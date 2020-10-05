@@ -36,14 +36,20 @@
     "unlimitedDrinks": {
       "type": "boolean"
     },
-    "meeting_rooms": {
-      "collection": "meeting-room"
-    },
     "location": {
       "type": "string"
     },
+    "call_rooms": {
+      "collection": "call-room"
+    },
+    "meeting_rooms": {
+      "collection": "meeting-room"
+    },
     "cozy_louges": {
       "collection": "cozy-louge"
+    },
+    "laptops": {
+      "type": "boolean"
     }
   }
 }

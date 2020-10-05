@@ -9,8 +9,11 @@
     "timestamps": true
   },
   "attributes": {
-    "MeetingRoomID": {
-      "type": "uid"
+    "meetingRoomName": {
+      "type": "string"
+    },
+    "bookings": {
+      "collection": "reservation"
     }
   }
 }

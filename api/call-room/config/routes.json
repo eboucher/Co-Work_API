@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/call-rooms",
+      "handler": "call-room.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/call-rooms/count",
+      "handler": "call-room.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/call-rooms/:id",
+      "handler": "call-room.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/call-rooms",
+      "handler": "call-room.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/call-rooms/:id",
+      "handler": "call-room.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/call-rooms/:id",
+      "handler": "call-room.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
