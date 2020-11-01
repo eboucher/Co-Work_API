@@ -67,12 +67,12 @@
         "resident"
       ]
     },
-    "booking": {
-      "via": "user",
-      "model": "reservation"
-    },
     "admin": {
       "type": "boolean"
+    },
+    "bookings": {
+      "via": "user",
+      "collection": "booking"
     }
   }
 }

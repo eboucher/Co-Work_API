@@ -39,17 +39,53 @@
     "city": {
       "type": "string"
     },
-    "call_rooms": {
-      "collection": "call-room"
-    },
-    "meeting_rooms": {
-      "collection": "meeting-room"
-    },
-    "cozy_louges": {
-      "collection": "cozy-louge"
-    },
     "laptops": {
       "type": "boolean"
+    },
+    "rooms": {
+      "collection": "room"
+    },
+    "mondayOp": {
+      "type": "string"
+    },
+    "mondayCl": {
+      "type": "string"
+    },
+    "tuesdayOp": {
+      "type": "string"
+    },
+    "tuesdayCl": {
+      "type": "string"
+    },
+    "wednesdayOp": {
+      "type": "string"
+    },
+    "wednesdayCl": {
+      "type": "string"
+    },
+    "thursdayOp": {
+      "type": "string"
+    },
+    "thursdayCl": {
+      "type": "string"
+    },
+    "fridayOp": {
+      "type": "string"
+    },
+    "fridayCl": {
+      "type": "string"
+    },
+    "saturdayOp": {
+      "type": "string"
+    },
+    "saturdayCl": {
+      "type": "string"
+    },
+    "sundayOp": {
+      "type": "string"
+    },
+    "sundayCl": {
+      "type": "string"
     }
   }
 }

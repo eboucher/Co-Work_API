@@ -11,9 +11,6 @@
   "attributes": {
     "callRoomName": {
       "type": "string"
-    },
-    "bookings": {
-      "collection": "reservation"
     }
   }
 }

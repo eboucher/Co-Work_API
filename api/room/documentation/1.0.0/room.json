@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/reservations": {
+    "/rooms": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Reservation"
+                    "$ref": "#/components/schemas/Room"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Reservation"
+          "Room"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Reservation"
+                  "$ref": "#/components/schemas/Room"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Reservation"
+          "Room"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewReservation"
+                "$ref": "#/components/schemas/NewRoom"
               }
             }
           }
         }
       }
     },
-    "/reservations/count": {
+    "/rooms/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Reservation"
+          "Room"
         ],
         "parameters": []
       }
     },
-    "/reservations/{id}": {
+    "/rooms/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Reservation"
+                  "$ref": "#/components/schemas/Room"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Reservation"
+          "Room"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Reservation"
+                  "$ref": "#/components/schemas/Room"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Reservation"
+          "Room"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewReservation"
+                "$ref": "#/components/schemas/NewRoom"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Reservation"
+          "Room"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Reservation": {
+      "Room": {
         "required": [
           "id"
         ],
@@ -522,143 +522,56 @@
           "id": {
             "type": "string"
           },
-          "start": {
-            "type": "time"
-          },
-          "end": {
-            "type": "time"
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "FirstName": {
-                "type": "string"
-              },
-              "LastName": {
-                "type": "string"
-              },
-              "membership": {
-                "type": "string"
-              },
-              "booking": {
-                "type": "string"
-              },
-              "admin": {
-                "type": "boolean"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "call_room": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "callRoomName": {
-                "type": "string"
-              },
-              "bookings": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "cozy_louge": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "cozyLougeName": {
-                "type": "string"
-              },
-              "bookings": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "meeting_room": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "meetingRoomName": {
-                "type": "string"
-              },
-              "bookings": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "mealTray": {
-            "type": "boolean"
-          },
-          "laptop": {
-            "type": "boolean"
-          },
-          "date": {
+          "name": {
             "type": "string"
+          },
+          "bookings": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "start": {
+                  "type": "time"
+                },
+                "end": {
+                  "type": "time"
+                },
+                "mealTray": {
+                  "type": "boolean"
+                },
+                "laptop": {
+                  "type": "boolean"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "roomType": {
+            "type": "string",
+            "enum": [
+              "meetingRoom",
+              "callRoom",
+              "cozyLouge"
+            ]
           },
           "created_by": {
             "required": [
@@ -750,34 +663,24 @@
           }
         }
       },
-      "NewReservation": {
+      "NewRoom": {
         "properties": {
-          "start": {
-            "type": "time"
-          },
-          "end": {
-            "type": "time"
-          },
-          "user": {
+          "name": {
             "type": "string"
           },
-          "call_room": {
-            "type": "string"
+          "bookings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "cozy_louge": {
-            "type": "string"
-          },
-          "meeting_room": {
-            "type": "string"
-          },
-          "mealTray": {
-            "type": "boolean"
-          },
-          "laptop": {
-            "type": "boolean"
-          },
-          "date": {
-            "type": "string"
+          "roomType": {
+            "type": "string",
+            "enum": [
+              "meetingRoom",
+              "callRoom",
+              "cozyLouge"
+            ]
           },
           "created_by": {
             "type": "string"
@@ -791,7 +694,7 @@
   },
   "tags": [
     {
-      "name": "Reservation"
+      "name": "Room"
     }
   ]
 }

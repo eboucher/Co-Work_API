@@ -11,9 +11,6 @@
   "attributes": {
     "meetingRoomName": {
       "type": "string"
-    },
-    "bookings": {
-      "collection": "reservation"
     }
   }
 }

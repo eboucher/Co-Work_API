@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/workspaces": {
+    "/bookings": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Workspace"
+                    "$ref": "#/components/schemas/Booking"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Workspace"
+          "Booking"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Workspace"
+                  "$ref": "#/components/schemas/Booking"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Workspace"
+          "Booking"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWorkspace"
+                "$ref": "#/components/schemas/NewBooking"
               }
             }
           }
         }
       }
     },
-    "/workspaces/count": {
+    "/bookings/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Workspace"
+          "Booking"
         ],
         "parameters": []
       }
     },
-    "/workspaces/{id}": {
+    "/bookings/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Workspace"
+                  "$ref": "#/components/schemas/Booking"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Workspace"
+          "Booking"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Workspace"
+                  "$ref": "#/components/schemas/Booking"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Workspace"
+          "Booking"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWorkspace"
+                "$ref": "#/components/schemas/NewBooking"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Workspace"
+          "Booking"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Workspace": {
+      "Booking": {
         "required": [
           "id"
         ],
@@ -522,95 +522,22 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "date": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
+          "start": {
+            "type": "time"
           },
-          "avatar": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "end": {
+            "type": "time"
           },
           "mealTray": {
             "type": "boolean"
           },
-          "WiFi": {
+          "laptop": {
             "type": "boolean"
           },
-          "unlimitedDrinks": {
-            "type": "boolean"
-          },
-          "city": {
-            "type": "string"
-          },
-          "laptops": {
-            "type": "boolean"
-          },
-          "rooms": {
+          "room": {
             "required": [
               "id"
             ],
@@ -638,47 +565,65 @@
               }
             }
           },
-          "mondayOp": {
-            "type": "string"
-          },
-          "mondayCl": {
-            "type": "string"
-          },
-          "tuesdayOp": {
-            "type": "string"
-          },
-          "tuesdayCl": {
-            "type": "string"
-          },
-          "wednesdayOp": {
-            "type": "string"
-          },
-          "wednesdayCl": {
-            "type": "string"
-          },
-          "thursdayOp": {
-            "type": "string"
-          },
-          "thursdayCl": {
-            "type": "string"
-          },
-          "fridayOp": {
-            "type": "string"
-          },
-          "fridayCl": {
-            "type": "string"
-          },
-          "saturdayOp": {
-            "type": "string"
-          },
-          "saturdayCl": {
-            "type": "string"
-          },
-          "sundayOp": {
-            "type": "string"
-          },
-          "sundayCl": {
-            "type": "string"
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "FirstName": {
+                "type": "string"
+              },
+              "LastName": {
+                "type": "string"
+              },
+              "membership": {
+                "type": "string"
+              },
+              "admin": {
+                "type": "boolean"
+              },
+              "bookings": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "created_by": {
             "required": [
@@ -770,72 +715,27 @@
           }
         }
       },
-      "NewWorkspace": {
+      "NewBooking": {
         "properties": {
-          "name": {
+          "date": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
+          "start": {
+            "type": "time"
+          },
+          "end": {
+            "type": "time"
           },
           "mealTray": {
             "type": "boolean"
           },
-          "WiFi": {
+          "laptop": {
             "type": "boolean"
           },
-          "unlimitedDrinks": {
-            "type": "boolean"
-          },
-          "city": {
+          "room": {
             "type": "string"
           },
-          "laptops": {
-            "type": "boolean"
-          },
-          "rooms": {
-            "type": "string"
-          },
-          "mondayOp": {
-            "type": "string"
-          },
-          "mondayCl": {
-            "type": "string"
-          },
-          "tuesdayOp": {
-            "type": "string"
-          },
-          "tuesdayCl": {
-            "type": "string"
-          },
-          "wednesdayOp": {
-            "type": "string"
-          },
-          "wednesdayCl": {
-            "type": "string"
-          },
-          "thursdayOp": {
-            "type": "string"
-          },
-          "thursdayCl": {
-            "type": "string"
-          },
-          "fridayOp": {
-            "type": "string"
-          },
-          "fridayCl": {
-            "type": "string"
-          },
-          "saturdayOp": {
-            "type": "string"
-          },
-          "saturdayCl": {
-            "type": "string"
-          },
-          "sundayOp": {
-            "type": "string"
-          },
-          "sundayCl": {
+          "user": {
             "type": "string"
           },
           "created_by": {
@@ -850,7 +750,7 @@
   },
   "tags": [
     {
-      "name": "Workspace"
+      "name": "Booking"
     }
   ]
 }

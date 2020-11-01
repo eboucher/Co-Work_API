@@ -11,9 +11,6 @@
   "attributes": {
     "cozyLougeName": {
       "type": "string"
-    },
-    "bookings": {
-      "collection": "reservation"
     }
   }
 }

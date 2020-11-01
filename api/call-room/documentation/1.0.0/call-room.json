@@ -538,49 +538,6 @@
           "callRoomName": {
             "type": "string"
           },
-          "bookings": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "start": {
-                "type": "time"
-              },
-              "end": {
-                "type": "time"
-              },
-              "user": {
-                "type": "string"
-              },
-              "call_room": {
-                "type": "string"
-              },
-              "cozy_louge": {
-                "type": "string"
-              },
-              "meeting_room": {
-                "type": "string"
-              },
-              "mealTray": {
-                "type": "boolean"
-              },
-              "laptop": {
-                "type": "boolean"
-              },
-              "date": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "created_by": {
             "required": [
               "id",
@@ -674,9 +631,6 @@
       "NewCall-room": {
         "properties": {
           "callRoomName": {
-            "type": "string"
-          },
-          "bookings": {
             "type": "string"
           },
           "created_by": {

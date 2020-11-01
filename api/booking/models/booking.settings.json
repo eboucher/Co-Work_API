@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "reservations",
+  "collectionName": "bookings",
   "info": {
     "name": "Booking"
   },
@@ -9,25 +9,14 @@
     "timestamps": true
   },
   "attributes": {
+    "date": {
+      "type": "string"
+    },
     "start": {
       "type": "time"
     },
     "end": {
       "type": "time"
-    },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "booking"
-    },
-    "call_room": {
-      "model": "call-room"
-    },
-    "cozy_louge": {
-      "model": "cozy-louge"
-    },
-    "meeting_room": {
-      "model": "meeting-room"
     },
     "mealTray": {
       "type": "boolean"
@@ -35,8 +24,14 @@
     "laptop": {
       "type": "boolean"
     },
-    "date": {
-      "type": "string"
+    "room": {
+      "via": "bookings",
+      "model": "room"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "bookings"
     }
   }
 }

@@ -1265,51 +1265,48 @@
               "resident"
             ]
           },
-          "booking": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "start": {
-                "type": "time"
-              },
-              "end": {
-                "type": "time"
-              },
-              "user": {
-                "type": "string"
-              },
-              "call_room": {
-                "type": "string"
-              },
-              "cozy_louge": {
-                "type": "string"
-              },
-              "meeting_room": {
-                "type": "string"
-              },
-              "mealTray": {
-                "type": "boolean"
-              },
-              "laptop": {
-                "type": "boolean"
-              },
-              "date": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "admin": {
             "type": "boolean"
+          },
+          "bookings": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "start": {
+                  "type": "time"
+                },
+                "end": {
+                  "type": "time"
+                },
+                "mealTray": {
+                  "type": "boolean"
+                },
+                "laptop": {
+                  "type": "boolean"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "created_by": {
             "required": [
@@ -1450,11 +1447,14 @@
               "resident"
             ]
           },
-          "booking": {
-            "type": "string"
-          },
           "admin": {
             "type": "boolean"
+          },
+          "bookings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
