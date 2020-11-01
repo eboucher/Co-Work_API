@@ -10,10 +10,10 @@
   },
   "attributes": {
     "start": {
-      "type": "datetime"
+      "type": "time"
     },
     "end": {
-      "type": "datetime"
+      "type": "time"
     },
     "user": {
       "plugin": "users-permissions",
@@ -28,6 +28,15 @@
     },
     "meeting_room": {
       "model": "meeting-room"
+    },
+    "mealTray": {
+      "type": "boolean"
+    },
+    "laptop": {
+      "type": "boolean"
+    },
+    "date": {
+      "type": "string"
     }
   }
 }

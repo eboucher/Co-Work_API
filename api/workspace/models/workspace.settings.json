@@ -36,7 +36,7 @@
     "unlimitedDrinks": {
       "type": "boolean"
     },
-    "location": {
+    "city": {
       "type": "string"
     },
     "call_rooms": {
