@@ -558,10 +558,10 @@
                 "role": {
                   "type": "string"
                 },
-                "FirstName": {
+                "firstName": {
                   "type": "string"
                 },
-                "LastName": {
+                "lastName": {
                   "type": "string"
                 },
                 "membership": {

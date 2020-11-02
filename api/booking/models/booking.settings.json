@@ -12,12 +12,6 @@
     "date": {
       "type": "string"
     },
-    "start": {
-      "type": "time"
-    },
-    "end": {
-      "type": "time"
-    },
     "mealTray": {
       "type": "boolean"
     },
@@ -25,13 +19,19 @@
       "type": "boolean"
     },
     "room": {
-      "via": "bookings",
-      "model": "room"
+      "model": "room",
+      "via": "bookings"
     },
     "user": {
+      "via": "bookings",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "bookings"
+      "model": "user"
+    },
+    "start": {
+      "type": "string"
+    },
+    "end": {
+      "type": "string"
     }
   }
 }

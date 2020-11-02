@@ -53,10 +53,10 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "FirstName": {
+    "firstName": {
       "type": "string"
     },
-    "LastName": {
+    "lastName": {
       "type": "string"
     },
     "membership": {
@@ -71,8 +71,8 @@
       "type": "boolean"
     },
     "bookings": {
-      "via": "user",
-      "collection": "booking"
+      "collection": "booking",
+      "via": "user"
     }
   }
 }
